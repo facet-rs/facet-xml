@@ -65,7 +65,14 @@ where
         &mut self,
         mut wip: Partial<'de, BORROW>,
     ) -> Result<Partial<'de, BORROW>, DomDeserializeError<P::Error>> {
-        let shape = wip.shape();
+        // if there is a proxy, we have to use the proxy's shape. conversion is
+        // handled later by the required (Try)From implmentation From<Proxy> for T
+        let shape = if let Some(proxy) = wip.shape().effective_proxy(Some("xml")) {
+            proxy.shape
+        } else {
+            wip.shape()
+        };
+
         #[cfg(any(test, feature = "tracing"))]
         {
             use owo_colors::OwoColorize;
