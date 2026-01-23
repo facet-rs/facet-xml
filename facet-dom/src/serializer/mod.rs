@@ -320,9 +320,11 @@ where
     if let Ok(struct_) = value.into_struct() {
         let kind = struct_.ty().kind;
 
-        // For tuples, serialize as a flat sequence (like Vec)
+        // For standalone tuple types (A, B, C), serialize as a flat sequence
         // Each tuple field becomes a sibling element with the same tag name
-        if kind == StructKind::Tuple || kind == StructKind::TupleStruct {
+        // Note: TupleStruct (struct Foo(A, B)) is handled like regular structs below,
+        // with fields named _0, _1, etc. (valid XML element names)
+        if kind == StructKind::Tuple {
             for (_field_item, field_value) in struct_.fields_for_serialize() {
                 serialize_value(serializer, field_value, element_name)?;
             }
@@ -367,13 +369,19 @@ where
             (tag_result, doctype_result)
         };
 
-        // Determine element name: tag field value > provided name > shape rename > type identifier (lowerCamelCase)
+        // Determine element name: tag field value > provided name > shape rename > rename_all > lowerCamelCase
         let tag: Cow<'_, str> = if let Some(ref tag_value) = tag_field_value {
             Cow::Owned(tag_value.clone())
         } else if let Some(name) = element_name {
             Cow::Borrowed(name)
         } else if let Some(rename) = value.shape().get_builtin_attr_value::<&str>("rename") {
             Cow::Borrowed(rename)
+        } else if let Some(rename_all) = value.shape().get_builtin_attr_value::<&str>("rename_all")
+        {
+            Cow::Owned(crate::naming::apply_rename_all(
+                value.shape().type_identifier,
+                rename_all,
+            ))
         } else {
             // No explicit name - apply lowerCamelCase to type identifier
             to_element_name(value.shape().type_identifier)
@@ -573,11 +581,12 @@ where
 
         // Unit variant
         if variant.data.kind == StructKind::Unit {
-            let variant_name: Cow<'_, str> = variant
-                .get_builtin_attr("rename")
-                .and_then(|a| a.get_as::<&str>().copied())
-                .map(Cow::Borrowed)
-                .unwrap_or_else(|| to_element_name(variant.name));
+            // Use effective_name() to honor rename_all on enum
+            let variant_name: Cow<'_, str> = if variant.rename.is_some() {
+                Cow::Borrowed(variant.effective_name())
+            } else {
+                to_element_name(variant.name)
+            };
 
             if untagged {
                 serializer
@@ -629,11 +638,12 @@ where
                 return serialize_value(serializer, inner, element_name);
             }
 
-            let variant_name: Cow<'_, str> = variant
-                .get_builtin_attr("rename")
-                .and_then(|a| a.get_as::<&str>().copied())
-                .map(Cow::Borrowed)
-                .unwrap_or_else(|| to_element_name(variant.name));
+            // Use effective_name() to honor rename_all on enum
+            let variant_name: Cow<'_, str> = if variant.rename.is_some() {
+                Cow::Borrowed(variant.effective_name())
+            } else {
+                to_element_name(variant.name)
+            };
 
             // Externally tagged: <Variant>inner</Variant>
             if let Some(outer_tag) = element_name {
@@ -660,11 +670,12 @@ where
         }
 
         // Struct variant
-        let variant_name: Cow<'_, str> = variant
-            .get_builtin_attr("rename")
-            .and_then(|a| a.get_as::<&str>().copied())
-            .map(Cow::Borrowed)
-            .unwrap_or_else(|| to_element_name(variant.name));
+        // Use effective_name() to honor rename_all on enum
+        let variant_name: Cow<'_, str> = if variant.rename.is_some() {
+            Cow::Borrowed(variant.effective_name())
+        } else {
+            to_element_name(variant.name)
+        };
 
         match (tag_attr, content_attr) {
             // Internally tagged
