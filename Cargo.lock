@@ -730,6 +730,7 @@ dependencies = [
  "facet-core",
  "facet-dom",
  "facet-reflect",
+ "facet-testhelpers",
  "facet-xml",
 ]
 
