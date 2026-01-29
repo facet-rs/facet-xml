@@ -1,11 +1,11 @@
 [workspace]
 members = [
-    "facet-singularize",
-    "facet-dom",
-    "facet-xml",
-    "facet-xml-node",
-    "facet-atom",
-    "facet-svg",
+  "facet-singularize",
+  "facet-dom",
+  "facet-xml",
+  "facet-xml-node",
+  "facet-atom",
+  "facet-svg",
 ]
 resolver = "3"
 
@@ -43,3 +43,11 @@ http = "1.4.0"
 # Allow the facet_no_doc cfg in generated code
 [workspace.lints.rust]
 unexpected_cfgs = { level = "warn", check-cfg = ["cfg(facet_no_doc)"] }
+
+# Uncomment to develop
+[patch."https://github.com/facet-rs/facet"]
+facet = { path = "/Users/amos/bearcove/facet/facet" }
+facet-core = { path = "/Users/amos/bearcove/facet/facet-core" }
+facet-reflect = { path = "/Users/amos/bearcove/facet/facet-reflect" }
+facet-dessert = { path = "/Users/amos/bearcove/facet/facet-dessert" }
+facet-testhelpers = { path = "/Users/amos/bearcove/facet/facet-testhelpers" }

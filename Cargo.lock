@@ -460,7 +460,6 @@ checksum = "5692dd7b5a1978a5aeb0ce83b7655c58ca8efdcb79d21036ea249da95afec2c6"
 [[package]]
 name = "facet"
 version = "0.43.2"
-source = "git+https://github.com/facet-rs/facet?branch=main#d24751da9e8a9e5e6edefb90419103b6ccaad42e"
 dependencies = [
  "autocfg",
  "facet-core",
@@ -481,7 +480,6 @@ dependencies = [
 [[package]]
 name = "facet-core"
 version = "0.43.2"
-source = "git+https://github.com/facet-rs/facet?branch=main#d24751da9e8a9e5e6edefb90419103b6ccaad42e"
 dependencies = [
  "autocfg",
  "const-fnv1a-hash",
@@ -494,7 +492,6 @@ dependencies = [
 [[package]]
 name = "facet-dessert"
 version = "0.43.2"
-source = "git+https://github.com/facet-rs/facet?branch=main#d24751da9e8a9e5e6edefb90419103b6ccaad42e"
 dependencies = [
  "facet-core",
  "facet-reflect",
@@ -516,20 +513,19 @@ dependencies = [
 [[package]]
 name = "facet-format"
 version = "0.43.2"
-source = "git+https://github.com/facet-rs/facet?branch=main#d24751da9e8a9e5e6edefb90419103b6ccaad42e"
+source = "git+https://github.com/facet-rs/facet?branch=main#28a8ef73c8b31bbb55d39bdff1e32fa607683bd3"
 dependencies = [
  "facet-core",
  "facet-dessert",
- "facet-path",
+ "facet-path 0.43.2 (git+https://github.com/facet-rs/facet?branch=main)",
  "facet-reflect",
  "facet-solver",
- "facet-validate",
 ]
 
 [[package]]
 name = "facet-json"
 version = "0.43.2"
-source = "git+https://github.com/facet-rs/facet?branch=main#d24751da9e8a9e5e6edefb90419103b6ccaad42e"
+source = "git+https://github.com/facet-rs/facet?branch=main#28a8ef73c8b31bbb55d39bdff1e32fa607683bd3"
 dependencies = [
  "facet",
  "facet-core",
@@ -541,7 +537,6 @@ dependencies = [
 [[package]]
 name = "facet-macro-parse"
 version = "0.43.2"
-source = "git+https://github.com/facet-rs/facet?branch=main#d24751da9e8a9e5e6edefb90419103b6ccaad42e"
 dependencies = [
  "facet-macro-types",
  "proc-macro2",
@@ -551,7 +546,6 @@ dependencies = [
 [[package]]
 name = "facet-macro-types"
 version = "0.43.2"
-source = "git+https://github.com/facet-rs/facet?branch=main#d24751da9e8a9e5e6edefb90419103b6ccaad42e"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -561,7 +555,6 @@ dependencies = [
 [[package]]
 name = "facet-macros"
 version = "0.43.2"
-source = "git+https://github.com/facet-rs/facet?branch=main#d24751da9e8a9e5e6edefb90419103b6ccaad42e"
 dependencies = [
  "facet-macros-impl",
 ]
@@ -569,7 +562,6 @@ dependencies = [
 [[package]]
 name = "facet-macros-impl"
 version = "0.43.2"
-source = "git+https://github.com/facet-rs/facet?branch=main#d24751da9e8a9e5e6edefb90419103b6ccaad42e"
 dependencies = [
  "facet-macro-parse",
  "facet-macro-types",
@@ -582,7 +574,14 @@ dependencies = [
 [[package]]
 name = "facet-path"
 version = "0.43.2"
-source = "git+https://github.com/facet-rs/facet?branch=main#d24751da9e8a9e5e6edefb90419103b6ccaad42e"
+dependencies = [
+ "facet-core",
+]
+
+[[package]]
+name = "facet-path"
+version = "0.43.2"
+source = "git+https://github.com/facet-rs/facet?branch=main#28a8ef73c8b31bbb55d39bdff1e32fa607683bd3"
 dependencies = [
  "facet-core",
 ]
@@ -590,7 +589,7 @@ dependencies = [
 [[package]]
 name = "facet-pretty"
 version = "0.43.2"
-source = "git+https://github.com/facet-rs/facet?branch=main#d24751da9e8a9e5e6edefb90419103b6ccaad42e"
+source = "git+https://github.com/facet-rs/facet?branch=main#28a8ef73c8b31bbb55d39bdff1e32fa607683bd3"
 dependencies = [
  "facet-core",
  "facet-reflect",
@@ -600,10 +599,12 @@ dependencies = [
 [[package]]
 name = "facet-reflect"
 version = "0.43.2"
-source = "git+https://github.com/facet-rs/facet?branch=main#d24751da9e8a9e5e6edefb90419103b6ccaad42e"
 dependencies = [
  "facet-core",
- "facet-path",
+ "facet-path 0.43.2",
+ "hashbrown 0.16.1",
+ "regex",
+ "smallvec",
  "tracing",
 ]
 
@@ -625,7 +626,7 @@ dependencies = [
 [[package]]
 name = "facet-solver"
 version = "0.43.2"
-source = "git+https://github.com/facet-rs/facet?branch=main#d24751da9e8a9e5e6edefb90419103b6ccaad42e"
+source = "git+https://github.com/facet-rs/facet?branch=main#28a8ef73c8b31bbb55d39bdff1e32fa607683bd3"
 dependencies = [
  "facet-core",
  "facet-reflect",
@@ -646,7 +647,6 @@ dependencies = [
 [[package]]
 name = "facet-testhelpers"
 version = "0.43.2"
-source = "git+https://github.com/facet-rs/facet?branch=main#d24751da9e8a9e5e6edefb90419103b6ccaad42e"
 dependencies = [
  "color-backtrace",
  "facet-testhelpers-macros",
@@ -658,20 +658,9 @@ dependencies = [
 [[package]]
 name = "facet-testhelpers-macros"
 version = "0.43.2"
-source = "git+https://github.com/facet-rs/facet?branch=main#d24751da9e8a9e5e6edefb90419103b6ccaad42e"
 dependencies = [
  "quote",
  "unsynn",
-]
-
-[[package]]
-name = "facet-validate"
-version = "0.43.2"
-source = "git+https://github.com/facet-rs/facet?branch=main#d24751da9e8a9e5e6edefb90419103b6ccaad42e"
-dependencies = [
- "facet",
- "facet-core",
- "regex",
 ]
 
 [[package]]
@@ -788,6 +777,8 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "841d1cc9bed7f9236f321df977030373f4a4163ae1a7dbfe1a51a2c1a51d9100"
 dependencies = [
  "allocator-api2",
+ "equivalent",
+ "foldhash",
 ]
 
 [[package]]
@@ -1454,6 +1445,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b2aa850e253778c88a04c3d7323b043aeda9d3e30d5971937c1855769763678e"
 
 [[package]]
+name = "smallvec"
+version = "2.0.0-alpha.12"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ef784004ca8777809dcdad6ac37629f0a97caee4c685fcea805278d81dd8b857"
+
+[[package]]
 name = "stable_deref_trait"
 version = "1.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1973,18 +1970,18 @@ dependencies = [
 
 [[package]]
 name = "zerocopy"
-version = "0.8.34"
+version = "0.8.35"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "71ddd76bcebeed25db614f82bf31a9f4222d3fbba300e6fb6c00afa26cbd4d9d"
+checksum = "fdea86ddd5568519879b8187e1cf04e24fce28f7fe046ceecbce472ff19a2572"
 dependencies = [
  "zerocopy-derive",
 ]
 
 [[package]]
 name = "zerocopy-derive"
-version = "0.8.34"
+version = "0.8.35"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d8187381b52e32220d50b255276aa16a084ec0a9017a0ca2152a1f55c539758d"
+checksum = "0c15e1b46eff7c6c91195752e0eeed8ef040e391cdece7c25376957d5f15df22"
 dependencies = [
  "proc-macro2",
  "quote",
