@@ -10,7 +10,7 @@ members = [
 resolver = "3"
 
 [workspace.package]
-version = "0.43.1"
+version = "0.44.0"
 edition = "2024"
 rust-version = "1.90"
 license = "MIT OR Apache-2.0"
@@ -26,12 +26,12 @@ facet-testhelpers = { git = "https://github.com/facet-rs/facet", branch = "main"
 rediff = { git = "https://github.com/bearcove/rediff", branch = "main" }
 
 # Local workspace crates
-facet-singularize = { path = "facet-singularize", version = "0.43.1" }
-facet-dom = { path = "facet-dom", version = "0.43.1" }
-facet-xml = { path = "facet-xml", version = "0.43.1" }
-facet-xml-node = { path = "facet-xml-node", version = "0.43.1" }
-facet-atom = { path = "facet-atom", version = "0.43.1" }
-facet-svg = { path = "facet-svg", version = "0.43.1" }
+facet-singularize = { path = "facet-singularize", version = "0.44.0" }
+facet-dom = { path = "facet-dom", version = "0.44.0" }
+facet-xml = { path = "facet-xml", version = "0.44.0" }
+facet-xml-node = { path = "facet-xml-node", version = "0.44.0" }
+facet-atom = { path = "facet-atom", version = "0.44.0" }
+facet-svg = { path = "facet-svg", version = "0.44.0" }
 
 # Shared dependencies
 divan = "0.1.21"
