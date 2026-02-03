@@ -469,7 +469,7 @@ dependencies = [
 
 [[package]]
 name = "facet-atom"
-version = "0.43.1"
+version = "0.44.0"
 dependencies = [
  "facet",
  "facet-testhelpers",
@@ -502,7 +502,7 @@ dependencies = [
 
 [[package]]
 name = "facet-dom"
-version = "0.43.1"
+version = "0.44.0"
 dependencies = [
  "facet-core",
  "facet-dessert",
@@ -611,7 +611,7 @@ dependencies = [
 
 [[package]]
 name = "facet-singularize"
-version = "0.43.1"
+version = "0.44.0"
 dependencies = [
  "divan",
  "facet",
@@ -635,7 +635,7 @@ dependencies = [
 
 [[package]]
 name = "facet-svg"
-version = "0.43.1"
+version = "0.44.0"
 dependencies = [
  "datatest-stable",
  "facet",
@@ -669,7 +669,7 @@ dependencies = [
 
 [[package]]
 name = "facet-xml"
-version = "0.43.1"
+version = "0.44.0"
 dependencies = [
  "axum-core",
  "facet",
@@ -687,7 +687,7 @@ dependencies = [
 
 [[package]]
 name = "facet-xml-node"
-version = "0.43.1"
+version = "0.44.0"
 dependencies = [
  "facet",
  "facet-core",
@@ -1738,9 +1738,9 @@ checksum = "ccf3ec651a847eb01de73ccad15eb7d99f80485de043efb2f370cd654f4ea44b"
 
 [[package]]
 name = "webpki-roots"
-version = "1.0.5"
+version = "1.0.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "12bed680863276c63889429bfd6cab3b99943659923822de1c8a39c49e4d722c"
+checksum = "22cfaf3c063993ff62e73cb4311efde4db1efb31ab78a3e5c457939ad5cc0bed"
 dependencies = [
  "rustls-pki-types",
 ]
