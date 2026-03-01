@@ -24,7 +24,7 @@ facet-reflect = { version = "0.44.0" }
 facet-dessert = { version = "0.44.0" }
 facet-json = { version = "0.44.0" }
 facet-testhelpers = { version = "0.44.0" }
-rediff = { version = "0.44.0" }
+rediff = { version = "1.0.0" }
 
 # Local workspace crates
 facet-singularize = { path = "facet-singularize", version = "0.44.0" }
