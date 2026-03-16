@@ -495,9 +495,9 @@ dependencies = [
 
 [[package]]
 name = "facet-dessert"
-version = "0.44.0"
+version = "0.44.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8f6adbc40263963295ec8210de6693fe8061e3b0dd8a12e5136b69453f2f9882"
+checksum = "0fb18a3e7ee90139051f679390662ae158439c1564b73b482676b9a3862d13c0"
 dependencies = [
  "facet-core",
  "facet-reflect",
