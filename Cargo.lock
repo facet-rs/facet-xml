@@ -459,9 +459,9 @@ checksum = "5692dd7b5a1978a5aeb0ce83b7655c58ca8efdcb79d21036ea249da95afec2c6"
 
 [[package]]
 name = "facet"
-version = "0.44.0"
+version = "0.44.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c3891f42537f46b60647c3c722bdc6c561adfe8bf4e2209613e6a0aff8f35eb8"
+checksum = "5b6de2db94488348593f3720b7960e6622cbef42618fcbd90dc4dff86631b9fe"
 dependencies = [
  "autocfg",
  "facet-core",
@@ -481,9 +481,9 @@ dependencies = [
 
 [[package]]
 name = "facet-core"
-version = "0.44.0"
+version = "0.44.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7be120110a32b2695960a7508ac187312ec69956ed4ad08672c3e769ab6a34eb"
+checksum = "11f9ee47507f15c18243a8cba3b2a85b71176173f0097e9164a54dd4e4e3e4ce"
 dependencies = [
  "autocfg",
  "const-fnv1a-hash",
@@ -544,9 +544,9 @@ dependencies = [
 
 [[package]]
 name = "facet-macro-parse"
-version = "0.44.0"
+version = "0.44.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9c39ba332e363a270d256780901d851fa3542e8c7384b89c83ae1e0ccb2b7e02"
+checksum = "e77becc35b3b3008e7b3ef23356954e46561177316aff0a92c73fc6ddb2a15a0"
 dependencies = [
  "facet-macro-types",
  "proc-macro2",
@@ -555,9 +555,9 @@ dependencies = [
 
 [[package]]
 name = "facet-macro-types"
-version = "0.44.0"
+version = "0.44.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "87eaf30947d303ea115ab8f01f0b2532691413d9bed0cd475966dc02bc09cd4f"
+checksum = "8e600db5983cdad99db3b34adfa20b546d80f21ab8feecd35d40bbbfbcf53b5c"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -566,18 +566,18 @@ dependencies = [
 
 [[package]]
 name = "facet-macros"
-version = "0.44.0"
+version = "0.44.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9aaaf443c84c0534264666138bb248f8bbcdfb046be8a171b397432ea988eeef"
+checksum = "a3a7015e119aa043740dc8aee6b1b70e26b6616e1701b329496bf04990f44133"
 dependencies = [
  "facet-macros-impl",
 ]
 
 [[package]]
 name = "facet-macros-impl"
-version = "0.44.0"
+version = "0.44.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4451158f851d0a2c662e98693b3760107adbe63ddf30c86522817de67b479223"
+checksum = "cbb5e6f6cc64210ab12aa625b014db78d34d6a3b63d1011382c141518a1e1f78"
 dependencies = [
  "facet-macro-parse",
  "facet-macro-types",
