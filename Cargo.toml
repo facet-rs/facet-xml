@@ -30,9 +30,6 @@ rediff = { version = "0.46.0" }
 facet-singularize = { path = "facet-singularize", version = "0.46.0" }
 facet-dom = { path = "facet-dom", version = "0.46.0" }
 facet-xml = { path = "facet-xml", version = "0.46.0" }
-facet-xml-node = { path = "facet-xml-node", version = "0.46.0" }
-facet-atom = { path = "facet-atom", version = "0.46.0" }
-facet-svg = { path = "facet-svg", version = "0.46.0" }
 
 # Shared dependencies
 divan = "0.1.21"
