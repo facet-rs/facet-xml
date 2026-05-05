@@ -652,7 +652,6 @@ version = "0.46.0"
 dependencies = [
  "datatest-stable",
  "facet",
- "facet-reflect",
  "facet-testhelpers",
  "facet-xml",
  "rediff",
