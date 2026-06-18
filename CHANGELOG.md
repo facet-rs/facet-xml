@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.50.0-rc.1](https://github.com/facet-rs/facet-xml/compare/facet-singularize-v0.50.0-rc.0...facet-singularize-v0.50.0-rc.1) - 2026-06-09
+
+### Other
+
+- update Cargo.toml dependencies
+
 ### Added
 
 - Initial extraction from [facet-rs/facet](https://github.com/facet-rs/facet)
