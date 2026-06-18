@@ -1,5 +1,15 @@
 # facet-singularize
 
+> [!IMPORTANT]
+> The `facet-xml` workspace has moved into the Facet monorepo.
+>
+> New source location:
+> <https://github.com/facet-rs/facet/tree/main/facet-xml>
+>
+> Please file issues and pull requests against
+> <https://github.com/facet-rs/facet>. This repository is kept only as a
+> historical redirect before archival.
+
 [![crates.io](https://img.shields.io/crates/v/facet-singularize.svg)](https://crates.io/crates/facet-singularize)
 [![documentation](https://docs.rs/facet-singularize/badge.svg)](https://docs.rs/facet-singularize)
 [![MIT/Apache-2.0 licensed](https://img.shields.io/crates/l/facet-singularize.svg)](./LICENSE)
